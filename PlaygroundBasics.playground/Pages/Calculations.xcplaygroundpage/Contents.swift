@@ -3,17 +3,19 @@
 //:
 //: You can use the plus `+` and minus `-` signs for addition and subtraction, just as you’d expect:
 34 + 56 + 230
-
+12 + 97 + 42
 1000 - 300
 
 //: For multiplication, use the asterisk `*` :
 3 * 100
+4 * 107
 //: For division, use the slash `/` :
 24 / 8
 22 / 7
-
+45 / 6
 //: For grouping, use parenthesis `( )` :
 (300 + 500 + 400) / 3
+(250 + 150) * 6
 //: - experiment:\
 //: Practice using the playground like a calculator.
 //: Edit some of the existing expressions and add a few of your own.

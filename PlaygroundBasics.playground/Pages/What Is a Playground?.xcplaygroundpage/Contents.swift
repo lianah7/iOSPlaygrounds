@@ -3,13 +3,15 @@
 //:
 //: The simplest _line of code_ you can write is just a number:
 76000
-
-
+2345
+2003
 //:👆Notice how the number above looks different?
 //: This style of text is *editable code*, which means you can write it or change it to make stuff happen.
 //:
 //: For negative numbers use the minus sign:
 -1200
+-45
+-100
 /*:
 Notice how the numbers also show up in the gray area to the right? 👉
 
