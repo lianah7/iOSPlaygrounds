@@ -15,8 +15,13 @@ let goalieReportString = "At the game yesterday, \(goalieName) had \(firstHalfSa
     Sample story: “Today was a big day for <name>. They had finally saved up <number> dollars and were going to buy a <adjective> <noun>. They went to the <noun> <place> feeling very <positive emotion>. But then they felt <negative emotion>. They were all out of <noun>!”
 */
 // Add your version of the story below
-
-
+let chefName = "Stewie"
+let customerName = "Michael Stephen Sebastian Gary Dwight Cricket Scott Junior"
+let numberOfDishes = 5
+let nameOfDish = "gnocci"
+let numberOfDesserts = 7
+let nameOfDessert = "chocolate lava cake"
+let chefExperience = "At the restaurant on Friday, \(chefName) served \(numberOfDishes) dishes of \(nameOfDish) and \(numberOfDesserts) dishes of \(nameOfDessert) to his favorite customer, \(customerName)."
 
 //:
 //:

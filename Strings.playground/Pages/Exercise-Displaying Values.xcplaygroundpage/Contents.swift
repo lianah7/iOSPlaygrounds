@@ -14,12 +14,12 @@
  
  _Hint:_ Do all of your calculations in megabytes.
  */
+let totalStorage = 8000
+let usedStorage = 3000
+let videoStorage = 150
+let availableStorage = (totalStorage - usedStorage)/videoStorage
 
-
-
-
-
-
+let minutesOfVideo = "You can record \(availableStorage) more minutes of video."
 /*:
  
  _Copyright © 2017 Apple Inc._
