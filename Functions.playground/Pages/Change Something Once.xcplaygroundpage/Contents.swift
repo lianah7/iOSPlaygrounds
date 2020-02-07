@@ -7,23 +7,23 @@
  
  The other functions are declared below:
 */
-func rowTheBoat() {
+func runToTown() {
     print("Run, run, run to town")
     print("Got to get the memes")
 }
 
 func verseOne() {
-    rowTheBoat()
+    runToTown()
     merrilyDream()
 }
 
 func verseTwo() {
-    rowTheBoat()
+    runToTown()
     crocodileScream()
 }
 
 func verseThree() {
-    rowTheBoat()
+    runToTown()
     repetitiveTheme()
 }
 
