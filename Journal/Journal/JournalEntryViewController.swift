@@ -10,11 +10,7 @@ import UIKit
 
 class JournalEntryViewController: UIViewController {
 
-    @IBAction func doneWithSegue(_ sender: Any) {
-    }
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
+    
     @IBOutlet weak var JournalEntryContents: UITextView!
     
     var journalEntry: JournalEntry?

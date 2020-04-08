@@ -10,8 +10,7 @@ import UIKit
 
 class JournalTwoTableViewController: UITableViewController {
     
-    @IBAction func done(segue: UIStoryboardSegue) {
-    }
+
     
     let cellReuseIdentifier = "JournalEntryCell"
     let journalEntrySegueIdentifier = "journalEntry"
@@ -33,6 +32,9 @@ class JournalTwoTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    @IBAction func done(with: UIStoryboardSegue) {
+    }
+    
 
     // MARK: - Table view data source
 
