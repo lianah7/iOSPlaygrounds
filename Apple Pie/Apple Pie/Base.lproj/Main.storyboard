@@ -262,7 +262,6 @@
                         <outlet property="scoreLabel" destination="cTt-Fb-qu0" id="QhL-a5-MTJ"/>
                         <outlet property="treeImageView" destination="nYh-nl-Qr9" id="ATc-oE-5qI"/>
                         <outletCollection property="letterButtons" destination="Qh3-II-Y1l" collectionClass="NSMutableArray" id="N3Z-ej-UfS"/>
-                        <outletCollection property="letterButtons" destination="Qh3-II-Y1l" collectionClass="NSMutableArray" id="goS-46-ORh"/>
                         <outletCollection property="letterButtons" destination="fUt-L5-UHU" collectionClass="NSMutableArray" id="H1b-sd-k6R"/>
                         <outletCollection property="letterButtons" destination="u7l-US-6wn" collectionClass="NSMutableArray" id="bbE-jc-EJk"/>
                         <outletCollection property="letterButtons" destination="d3Z-rh-6fD" collectionClass="NSMutableArray" id="wLD-co-KUv"/>
