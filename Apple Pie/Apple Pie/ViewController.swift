@@ -46,15 +46,16 @@ class ViewController: UIViewController {
     }
     
     func updateUI() {
-       var letters = [String] ()
-       for letter in currentGame.formattedWord {
-           letters.append(String(letter))
-       }
-       correctWordLabel.text = currentGame.formattedWord
-       scoreLabel.text = "Wins: \(totalWins), Losses: \(totalLosses)"
-       treeImageView.image = UIImage(named: "Tree \(currentGame.incorrectMovesRemaining)")
-    
+        var letters = [String]()
+        for letter in currentGame.formattedWord {
+            letters.append(String(letter))
+        }
+        let wordWithSpacing = letters.joined(separator: " ")
+        correctWordLabel.text = wordWithSpacing
+        scoreLabel.text = "Wins: \(totalWins), Losses: \(totalLosses)"
+        treeImageView.image = UIImage(named: "Tree \(currentGame.incorrectMovesRemaining)")
     }
+
         
     func newRound() {
         if !listOfWords.isEmpty {
@@ -64,6 +65,7 @@ class ViewController: UIViewController {
             updateUI()
         } else {
             enableLetterButtons(false)
+    }
     }
     
 
@@ -78,7 +80,7 @@ class ViewController: UIViewController {
         
     }
     
-        func buttonPressed(_ sender: UIButton) {
+@IBAction func buttonPressed(_ sender: UIButton) {
         sender.isEnabled = false
         let letterString = sender.title(for: .normal)!
         let letter = Character(letterString.lowercased())
@@ -86,5 +88,4 @@ class ViewController: UIViewController {
         updateGameState()
 
         }
-    }
 }

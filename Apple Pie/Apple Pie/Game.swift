@@ -22,7 +22,7 @@ struct Game {
     var formattedWord: String {
         var guessedWord = ""
         for letter in word {
-            if guessedWord.contains(letter) {
+            if guessedLetters.contains(letter) {
                 guessedWord += "\(letter)"
             } else {
             guessedWord += "_"
