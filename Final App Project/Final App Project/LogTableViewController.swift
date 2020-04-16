@@ -1,28 +1,24 @@
 //
-//  JournalTwoTableViewController.swift
-//  Journal
+//  JournalTableViewController.swift
+//  Final App Project
 //
-//  Created by Liana Hill on 4/7/20.
+//  Created by Liana Hill on 4/16/20.
 //  Copyright © 2020 Liana Hill. All rights reserved.
 //
 
 import UIKit
 
-class JournalTwoTableViewController: UITableViewController {
+class LogTableViewController: UITableViewController {
     
     let cellReuseIdentifier = "JournalEntryCell"
-    let journalEntrySegueIdentifier = "journalEntry"
-    var journal = Journal()
+    var log = Log()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         for index in 0...100 {
-                   journal.entries.append(JournalEntry(date: Date(), contents: "Contents for entry\(index)"))
-               }
-               
-               let entry = JournalEntry(date: Date(), contents: "A cheerful, bright day!")
-               print("Entry: \(entry)")
+            log.entries.append(LogEntry(date: Date(), contents: "Contents for entry\(index)"))
+            
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,9 +26,6 @@ class JournalTwoTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    @IBAction func done(with: UIStoryboardSegue) {
-    }
-    
 
     // MARK: - Table view data source
 
@@ -43,22 +36,21 @@ class JournalTwoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return journal.entries.count
+        return log.count
     }
 
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
-
-        // Configure the cell...
         if let label = cell.textLabel,
-            let entry = journal.entry(index: indexPath.row) {
-            label.text = "\(entry)"
-        }
-          
-               
+            let entry = log.entry(index: indexPath.row) {
+                label.text = "\(entry)" }
         return cell
     }
+
+        // Configure the cell...
+
+        
     
 
     /*
@@ -96,23 +88,14 @@ class JournalTwoTableViewController: UITableViewController {
     }
     */
 
-
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == journalEntrySegueIdentifier {
-            if let journalEntryViewController = segue.destination as? JournalEntryViewController,
-            let cell = sender as? UITableViewCell,
-            let indexPath = self.tableView.indexPath(for: cell),
-            let entry = journal.entry(index: indexPath.row) {
-            journalEntryViewController.journalEntry = entry
-                
-            }
-        
-        }
-
     }
+    */
+
 }

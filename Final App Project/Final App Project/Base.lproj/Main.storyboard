@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mbP-it-9EA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log Table View Controller-->
+        <scene sceneID="Oi8-lX-NeV">
+            <objects>
+                <tableViewController id="n6J-hc-fL1" userLabel="Log Table View Controller" customClass="JournalTableViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B9n-3k-h2I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JournalEntryCell" id="2Ju-WV-gYX">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Ju-WV-gYX" id="93b-gq-ZhI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hxy-73-ZGF" kind="show" id="DM1-cy-UzD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="n6J-hc-fL1" id="flN-Em-PbB"/>
+                            <outlet property="delegate" destination="n6J-hc-fL1" id="Le0-C5-b1H"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Logbook" id="BB8-XA-Ysg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QBA-fj-o5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1091.304347826087" y="-165.40178571428569"/>
+        </scene>
+        <!--Log Entry View Controller-->
+        <scene sceneID="BiH-Kt-USB">
+            <objects>
+                <viewController id="hxy-73-ZGF" userLabel="Log Entry View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vrf-SP-s5e" customClass="JournalEntryViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="LogEntryContents" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W3L-NI-VMo">
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W3L-NI-VMo" firstAttribute="top" secondItem="fVQ-9k-VLL" secondAttribute="top" constant="10" id="Bnc-0K-Sdk"/>
+                            <constraint firstItem="fVQ-9k-VLL" firstAttribute="bottom" secondItem="W3L-NI-VMo" secondAttribute="bottom" constant="10" id="DFy-XW-jew"/>
+                            <constraint firstItem="fVQ-9k-VLL" firstAttribute="trailing" secondItem="W3L-NI-VMo" secondAttribute="trailing" constant="10" id="DNm-Qa-s6w"/>
+                            <constraint firstItem="W3L-NI-VMo" firstAttribute="leading" secondItem="fVQ-9k-VLL" secondAttribute="leading" constant="10" id="PUK-Ng-3Uq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fVQ-9k-VLL"/>
+                        <connections>
+                            <outlet property="logEntryContents" destination="W3L-NI-VMo" id="pq4-fR-Nnl"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="z6H-Gp-B92"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRs-Nq-ZrU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045" y="-165"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hsh-qP-rLr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mbP-it-9EA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GkH-Vv-ywp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="n6J-hc-fL1" kind="relationship" relationship="rootViewController" id="4gF-Nm-L6m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="enk-TV-gr0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.15942028985509" y="-165.40178571428569"/>
+        </scene>
+    </scenes>
+</document>
