@@ -10,13 +10,13 @@
         <!--Log Table View Controller-->
         <scene sceneID="Oi8-lX-NeV">
             <objects>
-                <tableViewController id="n6J-hc-fL1" userLabel="Log Table View Controller" customClass="JournalTableViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="n6J-hc-fL1" userLabel="Log Table View Controller" customClass="LogTableViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B9n-3k-h2I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JournalEntryCell" id="2Ju-WV-gYX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogEntryCell" id="2Ju-WV-gYX">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Ju-WV-gYX" id="93b-gq-ZhI">
@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="hxy-73-ZGF" kind="show" id="DM1-cy-UzD"/>
+                                    <segue destination="hxy-73-ZGF" kind="show" identifier="logEntry" id="DM1-cy-UzD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -33,11 +33,69 @@
                             <outlet property="delegate" destination="n6J-hc-fL1" id="Le0-C5-b1H"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Logbook" id="BB8-XA-Ysg"/>
+                    <navigationItem key="navigationItem" title="My Logbook" id="BB8-XA-Ysg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="cxV-oX-q1k">
+                            <connections>
+                                <segue destination="Gik-y6-W8n" kind="presentation" identifier="newLogEntry" id="vFM-nP-W88"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBA-fj-o5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1091.304347826087" y="-165.40178571428569"/>
+        </scene>
+        <!--New Log Entry View Controller-->
+        <scene sceneID="pzv-1x-d1t">
+            <objects>
+                <viewController id="Gik-y6-W8n" userLabel="New Log Entry View Controller" customClass="NewLogEntryViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mTo-Hj-dsZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="this is the new log entry view controller" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B8F-Wt-DMb">
+                                <rect key="frame" x="20" y="54" width="374" height="413"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7CV-pN-p55">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="New Log Entry" id="4VV-Vt-7VP">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sSy-de-Uc8">
+                                            <connections>
+                                                <action selector="cancel:" destination="Gik-y6-W8n" id="29q-0S-HHY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="V1z-yq-JwK">
+                                            <connections>
+                                                <segue destination="TRA-kD-gRA" kind="unwind" unwindAction="doneWithSegue:" id="j8g-wd-aCx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7CV-pN-p55" firstAttribute="leading" secondItem="dYs-D9-efv" secondAttribute="leading" id="Oqi-lq-alE"/>
+                            <constraint firstItem="B8F-Wt-DMb" firstAttribute="top" secondItem="7CV-pN-p55" secondAttribute="bottom" id="UAo-bJ-fgR"/>
+                            <constraint firstItem="7CV-pN-p55" firstAttribute="trailing" secondItem="dYs-D9-efv" secondAttribute="trailing" id="c1K-v9-og0"/>
+                            <constraint firstItem="7CV-pN-p55" firstAttribute="top" secondItem="dYs-D9-efv" secondAttribute="top" id="mF7-h0-8Dv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dYs-D9-efv"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancel" destination="sSy-de-Uc8" id="jb6-bl-m4u"/>
+                        <outlet property="logEntryContents" destination="B8F-Wt-DMb" id="M86-hw-IQ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXn-jR-ThH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="TRA-kD-gRA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1091" y="549"/>
         </scene>
         <!--Log Entry View Controller-->
         <scene sceneID="BiH-Kt-USB">
@@ -71,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRs-Nq-ZrU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2045" y="-165"/>
+            <point key="canvasLocation" x="1928" y="-165"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hsh-qP-rLr">
@@ -89,7 +147,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enk-TV-gr0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181.15942028985509" y="-165.40178571428569"/>
+            <point key="canvasLocation" x="323" y="-165"/>
         </scene>
     </scenes>
 </document>

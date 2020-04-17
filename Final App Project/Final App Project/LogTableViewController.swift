@@ -10,14 +10,18 @@ import UIKit
 
 class LogTableViewController: UITableViewController {
     
-    let cellReuseIdentifier = "JournalEntryCell"
+    let cellReuseIdentifier = "LogEntryCell"
+    let logEntrySegueIdentifier = "logEntry"
+    let newLogEntrySegueIdentifier = "newLogEntry"
     var log = Log()
-
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for index in 0...100 {
+        for index in 0...4 {
             log.entries.append(LogEntry(date: Date(), contents: "Contents for entry\(index)"))
+        }
             
 
         // Uncomment the following line to preserve selection between presentations
@@ -28,6 +32,11 @@ class LogTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    @IBAction func done(segue: UIStoryboardSegue) {
+           let newLogEntry = segue.source as! NewLogEntryViewController
+           log.entries.append(LogEntry(date: Date(), contents: newLogEntry.logEntryContents.text))
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -39,7 +48,6 @@ class LogTableViewController: UITableViewController {
         return log.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
         if let label = cell.textLabel,
@@ -88,14 +96,25 @@ class LogTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == logEntrySegueIdentifier {
+            if let logEntryViewController = segue.destination as? LogEntryViewController, let cell = sender as? UITableViewCell, let indexPath = self.tableView.indexPath(for: cell), let entry = log.entry(index: indexPath.row) {
+                logEntryViewController.logEntry = entry
+            }
+        } else if segue.identifier == newLogEntrySegueIdentifier {
+            if let newLogEntryViewController = segue.destination as? NewLogEntryViewController {
+                newLogEntryViewController.log = log
+        }
+    
+    
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+
+}
 
 }

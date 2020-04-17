@@ -1,25 +1,26 @@
 //
-//  LogEntryViewController.swift
+//  NewLogEntryViewController.swift
 //  Final App Project
 //
-//  Created by Liana Hill on 4/16/20.
+//  Created by Liana Hill on 4/17/20.
 //  Copyright © 2020 Liana Hill. All rights reserved.
 //
 
 import UIKit
 
-class LogEntryViewController: UIViewController {
-
+class NewLogEntryViewController: UIViewController {
+    
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var logEntryContents: UITextView!
     
-    var logEntry: LogEntry?
+    var log: Log?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let logEntry = logEntry {
-            logEntryContents.text = logEntry.contents
-            navigationItem.title = logEntry.description
 
         // Do any additional setup after loading the view.
     }
@@ -35,5 +36,4 @@ class LogEntryViewController: UIViewController {
     }
     */
 
-    }
 }
