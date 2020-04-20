@@ -34,8 +34,9 @@ class LogTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     @IBAction func done(segue: UIStoryboardSegue) {
-           let newLogEntry = segue.source as! NewLogEntryViewController
-           log.entries.append(LogEntry(date: Date(), contents: newLogEntry.logEntryContents.text))
+        let newLogEntry = segue.source as! NewLogEntryViewController
+        log.entries.append(LogEntry(date: Date(), contents: newLogEntry.logEntryContents.text))
+        tableView.reloadData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
