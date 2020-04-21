@@ -12,7 +12,7 @@
             <objects>
                 <tableViewController id="n6J-hc-fL1" userLabel="Log Table View Controller" customClass="LogTableViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B9n-3k-h2I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -43,7 +43,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBA-fj-o5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091.304347826087" y="-165.40178571428569"/>
+            <point key="canvasLocation" x="-320" y="-165"/>
         </scene>
         <!--New Log Entry View Controller-->
         <scene sceneID="pzv-1x-d1t">
@@ -53,13 +53,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="this is the new log entry view controller" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B8F-Wt-DMb">
-                                <rect key="frame" x="20" y="54" width="374" height="413"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7CV-pN-p55">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
@@ -77,36 +70,42 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="this is the new log entry view controller" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B8F-Wt-DMb">
+                                <rect key="frame" x="20" y="176" width="374" height="413"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="7CV-pN-p55" firstAttribute="leading" secondItem="dYs-D9-efv" secondAttribute="leading" id="Oqi-lq-alE"/>
-                            <constraint firstItem="B8F-Wt-DMb" firstAttribute="top" secondItem="7CV-pN-p55" secondAttribute="bottom" id="UAo-bJ-fgR"/>
                             <constraint firstItem="7CV-pN-p55" firstAttribute="trailing" secondItem="dYs-D9-efv" secondAttribute="trailing" id="c1K-v9-og0"/>
                             <constraint firstItem="7CV-pN-p55" firstAttribute="top" secondItem="dYs-D9-efv" secondAttribute="top" id="mF7-h0-8Dv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dYs-D9-efv"/>
                     </view>
                     <connections>
-                        <outlet property="cancel" destination="sSy-de-Uc8" id="jb6-bl-m4u"/>
                         <outlet property="logEntryContents" destination="B8F-Wt-DMb" id="M86-hw-IQ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXn-jR-ThH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="TRA-kD-gRA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1091" y="549"/>
+            <point key="canvasLocation" x="-320" y="560"/>
         </scene>
         <!--Log Entry View Controller-->
         <scene sceneID="BiH-Kt-USB">
             <objects>
-                <viewController id="hxy-73-ZGF" userLabel="Log Entry View Controller" sceneMemberID="viewController">
+                <viewController id="hxy-73-ZGF" userLabel="Log Entry View Controller" customClass="LogEntryViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vrf-SP-s5e" customClass="JournalEntryViewController">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="LogEntryContents" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W3L-NI-VMo">
-                                <rect key="frame" x="10" y="98" width="394" height="754"/>
+                                <rect key="frame" x="10" y="10" width="394" height="788"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -121,15 +120,15 @@
                             <constraint firstItem="W3L-NI-VMo" firstAttribute="leading" secondItem="fVQ-9k-VLL" secondAttribute="leading" constant="10" id="PUK-Ng-3Uq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fVQ-9k-VLL"/>
-                        <connections>
-                            <outlet property="logEntryContents" destination="W3L-NI-VMo" id="pq4-fR-Nnl"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="z6H-Gp-B92"/>
+                    <connections>
+                        <outlet property="logEntryContents" destination="W3L-NI-VMo" id="EOs-FB-39L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRs-Nq-ZrU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928" y="-165"/>
+            <point key="canvasLocation" x="536" y="-165"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="etd-SW-Xu1">
@@ -140,28 +139,79 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEk-mG-ce7">
-                                <rect key="frame" x="118" y="249" width="178" height="63"/>
+                                <rect key="frame" x="110" y="278" width="194" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIA-xq-1uP">
-                                <rect key="frame" x="118" y="590" width="199" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Workouts">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kCA-f1-T9R" kind="show" id="Hxc-mz-QEm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPZ-Hc-lcG">
                                 <rect key="frame" x="102" y="399" width="210" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Logbook">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="n6J-hc-fL1" kind="show" identifier="logbook" id="hUU-XJ-KeT"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIA-xq-1uP">
+                                <rect key="frame" x="108" y="530" width="199" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Timer">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome! Ready to get Up and Moving?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfn-tQ-sNZ">
+                                <rect key="frame" x="16" y="124" width="383" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.59776340884961621" green="0.62927230073892138" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Hto-zI-L06"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ykW-3I-Tb5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="321.73913043478262" y="-966.96428571428567"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="xbg-kW-tAC">
+            <objects>
+                <tableViewController id="kCA-f1-T9R" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="77v-7l-0pB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QgJ-nP-cH2">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QgJ-nP-cH2" id="DVK-ik-5ry">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kCA-f1-T9R" id="B5y-Yk-jcX"/>
+                            <outlet property="delegate" destination="kCA-f1-T9R" id="SV6-WC-LfJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="eUr-7d-PWk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mm2-BB-ma9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2283" y="-165"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hsh-qP-rLr">
@@ -179,7 +229,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enk-TV-gr0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="323" y="-165"/>
+            <point key="canvasLocation" x="-1135" y="-165"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7oC-zM-E7r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c0w-UX-Yxg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dNa-8L-3dW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kCA-f1-T9R" kind="relationship" relationship="rootViewController" id="SES-a1-yXH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Eh-eH-4CB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1417" y="-165"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Hxc-mz-QEm"/>
+        <segue reference="hUU-XJ-KeT"/>
+    </inferredMetricsTieBreakers>
 </document>
