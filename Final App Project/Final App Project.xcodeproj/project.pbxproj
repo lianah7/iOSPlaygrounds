@@ -19,7 +19,9 @@
 		8CEC305C24489B52005AD5F0 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC305B24489B52005AD5F0 /* Log.swift */; };
 		8CEC305E2448A19F005AD5F0 /* LogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC305D2448A19F005AD5F0 /* LogEntryViewController.swift */; };
 		8CEC3060244A076F005AD5F0 /* NewLogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC305F244A076F005AD5F0 /* NewLogEntryViewController.swift */; };
-		8CEC3064244F6CD9005AD5F0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC3063244F6CD9005AD5F0 /* NavigationViewController.swift */; };
+		8CEC30662450C954005AD5F0 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC30652450C954005AD5F0 /* Exercise.swift */; };
+		8CEC30682450CA7A005AD5F0 /* WorkoutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC30672450CA7A005AD5F0 /* WorkoutsTableViewController.swift */; };
+		8CEC306A2450CD35005AD5F0 /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC30692450CD35005AD5F0 /* ExerciseTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +60,9 @@
 		8CEC305B24489B52005AD5F0 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		8CEC305D2448A19F005AD5F0 /* LogEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryViewController.swift; sourceTree = "<group>"; };
 		8CEC305F244A076F005AD5F0 /* NewLogEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLogEntryViewController.swift; sourceTree = "<group>"; };
-		8CEC3063244F6CD9005AD5F0 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		8CEC30652450C954005AD5F0 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		8CEC30672450CA7A005AD5F0 /* WorkoutsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewController.swift; sourceTree = "<group>"; };
+		8CEC30692450CD35005AD5F0 /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +116,9 @@
 				8CEC302524489111005AD5F0 /* AppDelegate.swift */,
 				8CEC302724489111005AD5F0 /* SceneDelegate.swift */,
 				8CEC302B24489111005AD5F0 /* Main.storyboard */,
-				8CEC3063244F6CD9005AD5F0 /* NavigationViewController.swift */,
+				8CEC30692450CD35005AD5F0 /* ExerciseTableViewController.swift */,
+				8CEC30672450CA7A005AD5F0 /* WorkoutsTableViewController.swift */,
+				8CEC30652450C954005AD5F0 /* Exercise.swift */,
 				8CEC305F244A076F005AD5F0 /* NewLogEntryViewController.swift */,
 				8CEC305724489440005AD5F0 /* LogTableViewController.swift */,
 				8CEC305D2448A19F005AD5F0 /* LogEntryViewController.swift */,
@@ -274,10 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CEC3064244F6CD9005AD5F0 /* NavigationViewController.swift in Sources */,
 				8CEC302624489111005AD5F0 /* AppDelegate.swift in Sources */,
+				8CEC306A2450CD35005AD5F0 /* ExerciseTableViewController.swift in Sources */,
+				8CEC30662450C954005AD5F0 /* Exercise.swift in Sources */,
 				8CEC305A24489938005AD5F0 /* LogEntry.swift in Sources */,
 				8CEC305C24489B52005AD5F0 /* Log.swift in Sources */,
+				8CEC30682450CA7A005AD5F0 /* WorkoutsTableViewController.swift in Sources */,
 				8CEC305824489440005AD5F0 /* LogTableViewController.swift in Sources */,
 				8CEC305E2448A19F005AD5F0 /* LogEntryViewController.swift in Sources */,
 				8CEC3060244A076F005AD5F0 /* NewLogEntryViewController.swift in Sources */,
