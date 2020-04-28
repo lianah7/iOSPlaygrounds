@@ -9,7 +9,7 @@
 import UIKit
 
 class ExerciseTableViewController: UITableViewController {
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 

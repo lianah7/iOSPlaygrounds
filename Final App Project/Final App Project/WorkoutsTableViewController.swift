@@ -9,7 +9,10 @@
 import UIKit
 
 class WorkoutsTableViewController: UITableViewController {
-    var workouts = ["Biceps", "Triceps", "Shoulders"]
+    var workouts = ["Shoulders": ["Diving Dolphin", "Plank, Raise, Tap, Crunch", "Dumbbell Lateral Raise"],
+                    "Biceps": ["Bicep Curls", "Hammer Curls", "Zottman Curls", "'W' Curls"],
+        "Triceps": ["Narrow Push-Up", "Triceps Bow", "Bench Dip"]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +32,7 @@ class WorkoutsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return workouts.count 
+        return workouts.keys.count
     }
 
     

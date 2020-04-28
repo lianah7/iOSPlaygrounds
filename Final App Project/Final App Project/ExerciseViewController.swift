@@ -9,7 +9,9 @@
 import UIKit
 
 class ExerciseViewController: UIViewController {
-
+    
+    @IBOutlet weak var exerciseImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
