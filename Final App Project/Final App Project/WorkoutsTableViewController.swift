@@ -9,7 +9,10 @@
 import UIKit
 
 class WorkoutsTableViewController: UITableViewController {
-    var workouts = ["Shoulders": ["Diving Dolphin", "Plank, Raise, Tap, Crunch", "Dumbbell Lateral Raise"],
+//    https://www.hackingwithswift.com/example-code/language/fixing-class-viewcontroller-has-no-initializers "fixing no initializers error"
+    
+//    https://developer.apple.com/documentation/swift/dictionary "for fixing converstion error"
+    var workouts; [String: String] = ["Shoulders": ["Diving Dolphin", "Plank, Raise, Tap, Crunch", "Dumbbell Lateral Raise"],
                     "Biceps": ["Bicep Curls", "Hammer Curls", "Zottman Curls", "'W' Curls"],
         "Triceps": ["Narrow Push-Up", "Triceps Bow", "Bench Dip"]]
     
@@ -38,7 +41,7 @@ class WorkoutsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "workouts", for: indexPath)
-        cell.textLabel?.text = workouts[indexPath.row] 
+        cell.textLabel?.text = workouts[indexPath.row]
         
         // Configure the cell...
 
