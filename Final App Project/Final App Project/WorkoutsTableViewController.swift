@@ -9,10 +9,8 @@
 import UIKit
 
 class WorkoutsTableViewController: UITableViewController {
-//    https://www.hackingwithswift.com/example-code/language/fixing-class-viewcontroller-has-no-initializers "fixing no initializers error"
-    
-//    https://developer.apple.com/documentation/swift/dictionary "for fixing converstion error"
-    var workouts; [String: String] = ["Shoulders": ["Diving Dolphin", "Plank, Raise, Tap, Crunch", "Dumbbell Lateral Raise"],
+
+    var workouts: [String: [String]] = ["Shoulders": ["Diving Dolphin", "Plank, Raise, Tap, Crunch", "Dumbbell Lateral Raise"],
                     "Biceps": ["Bicep Curls", "Hammer Curls", "Zottman Curls", "'W' Curls"],
         "Triceps": ["Narrow Push-Up", "Triceps Bow", "Bench Dip"]]
     
@@ -41,7 +39,8 @@ class WorkoutsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "workouts", for: indexPath)
-        cell.textLabel?.text = workouts[indexPath.row]
+        let bodyParts = Array(workouts.keys)
+        cell.textLabel?.text = bodyParts[indexPath.row]
         
         // Configure the cell...
 
@@ -84,14 +83,24 @@ class WorkoutsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let bodyParts = Array(workouts.keys)
+        if segue.identifier == "exercises" {
+            if let exerciseViewController = segue.destination as? ExerciseTableViewController,
+            let cell = sender as? UITableViewCell,
+            let indexPath = self.tableView.indexPath(for: cell),
+            let exercise = workouts[bodyParts[indexPath.row]] {
+            exerciseViewController.exerciseList = exercise
+            
+        }
     }
-    */
+    
 
+}
 }
