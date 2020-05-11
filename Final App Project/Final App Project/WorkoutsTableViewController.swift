@@ -11,8 +11,14 @@ import UIKit
 class WorkoutsTableViewController: UITableViewController {
 
     var workouts: [String: [String]] = ["Shoulders": ["Diving Dolphin", "Plank, Raise, Tap, Crunch", "Dumbbell Lateral Raise"],
-                    "Biceps": ["Bicep Curls", "Hammer Curls", "Zottman Curls", "'W' Curls"],
-        "Triceps": ["Narrow Push-Up", "Triceps Bow", "Bench Dip"]]
+                    "Biceps": ["Bicep Curls", "Hammer Curls", "Feet Elevated Push-Ups", "Isolated Single Arm Curls"],
+                    "Triceps": ["Narrow Push-Up", "Diamond Push-Up", "Tricep Dips", "Tricep Extensions"],
+                    "Chest": [],
+                    "Abs": [],
+                    "Oblique": [],
+                    "Quads": [],
+                    "Hamstrings": [],
+                    "Calves": [] ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
