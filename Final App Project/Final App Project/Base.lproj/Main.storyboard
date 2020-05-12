@@ -252,7 +252,7 @@
         <!--Exercise View Controller-->
         <scene sceneID="CTE-5r-YIj">
             <objects>
-                <viewController id="Kza-iS-9sj" customClass="ExerciseViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="exerciseView" id="Kza-iS-9sj" customClass="ExerciseViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nIJ-fW-b5b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

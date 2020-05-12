@@ -20,6 +20,20 @@ class ExerciseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //https://www.youtube.com/watch?v=X0fCMwAMZY8 for passing data from table view to view controller for exercises
+    
+      override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          var name2 = String()
+          
+          tableView.deselectRow(at: indexPath, animated: true)
+          
+          let exercise = exerciseList[indexPath.row]
+          name2 = (exercise.value(forKey: "shoulder") as? String)!
+          
+          let storyboard = UIStoryboard(name: "Main")
+      }
+     
+    
 
     /*
     // MARK: - Navigation

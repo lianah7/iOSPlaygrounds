@@ -17,4 +17,4 @@ struct ExerciseList {
     }
 }
 
-//https://www.youtube.com/watch?v=X0fCMwAMZY8 for passing data from table view to view controller for exercises
+
