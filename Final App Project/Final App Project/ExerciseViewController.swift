@@ -10,29 +10,21 @@ import UIKit
 
 class ExerciseViewController: UIViewController {
     
+    @IBOutlet weak var exerciseLabel: UILabel!
+    
+    @IBOutlet weak var exerciseDescription: UITextView!
+    
     @IBOutlet weak var exerciseImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
+//         fix "exerciseList" part
+        exerciseLabel.text = exerciseList[myIndex]
+        exerciseDescription.text = exerciseDesc[myIndex]
+        exerciseImage.image = UIImage(named: ")
 
         // Do any additional setup after loading the view.
     }
-    
-    //https://www.youtube.com/watch?v=X0fCMwAMZY8 for passing data from table view to view controller for exercises
-    
-      override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-          var name2 = String()
-          
-          tableView.deselectRow(at: indexPath, animated: true)
-          
-          let exercise = exerciseList[indexPath.row]
-          name2 = (exercise.value(forKey: "shoulder") as? String)!
-          
-          let storyboard = UIStoryboard(name: "Main")
-      }
-     
     
 
     /*

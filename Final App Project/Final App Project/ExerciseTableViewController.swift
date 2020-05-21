@@ -8,6 +8,13 @@
 
 import UIKit
 
+//    https://www.youtube.com/watch?v=A6Wl8ySrOZI
+
+
+var bodyParts = ["Shoulders", "Biceps", "Triceps", "Chest", "Abs", "Obliques", "Quads", "Hamstrings", "Calves"]
+var exerciseDesc = ["Hold the weights down by your sides, with your palms facing inward and thumbs facing up. Start with your elbows pulled into your sides and curl the weights up to your shoulders. Finish the movement by extending your arms down slowly and with control. Do 10 reps of 2-3 sets"]
+var myIndex = 0
+
 class ExerciseTableViewController: UITableViewController {
 // receives information 
     var exerciseList = [String]()
@@ -44,7 +51,10 @@ class ExerciseTableViewController: UITableViewController {
         return cell
     }
     
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "segue", sender: self)
+    }
   
 
     /*
