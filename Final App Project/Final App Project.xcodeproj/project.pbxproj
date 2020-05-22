@@ -24,6 +24,7 @@
 		8CEC306A2450CD35005AD5F0 /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC30692450CD35005AD5F0 /* ExerciseTableViewController.swift */; };
 		8CEC306E24572289005AD5F0 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC306D24572289005AD5F0 /* ExerciseViewController.swift */; };
 		8CEC3070245CB62C005AD5F0 /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC306F245CB62C005AD5F0 /* ExerciseList.swift */; };
+		8CEC307224785D98005AD5F0 /* TargetArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC307124785D98005AD5F0 /* TargetArea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		8CEC30692450CD35005AD5F0 /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
 		8CEC306D24572289005AD5F0 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		8CEC306F245CB62C005AD5F0 /* ExerciseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseList.swift; sourceTree = "<group>"; };
+		8CEC307124785D98005AD5F0 /* TargetArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetArea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +122,9 @@
 				8CEC302524489111005AD5F0 /* AppDelegate.swift */,
 				8CEC302724489111005AD5F0 /* SceneDelegate.swift */,
 				8CEC302B24489111005AD5F0 /* Main.storyboard */,
-				8CEC30692450CD35005AD5F0 /* ExerciseTableViewController.swift */,
+				8CEC307124785D98005AD5F0 /* TargetArea.swift */,
 				8CEC30672450CA7A005AD5F0 /* WorkoutsTableViewController.swift */,
+				8CEC30692450CD35005AD5F0 /* ExerciseTableViewController.swift */,
 				8CEC306D24572289005AD5F0 /* ExerciseViewController.swift */,
 				8CEC30652450C954005AD5F0 /* Exercise.swift */,
 				8CEC306F245CB62C005AD5F0 /* ExerciseList.swift */,
@@ -298,6 +301,7 @@
 				8CEC305E2448A19F005AD5F0 /* LogEntryViewController.swift in Sources */,
 				8CEC3060244A076F005AD5F0 /* NewLogEntryViewController.swift in Sources */,
 				8CEC302824489111005AD5F0 /* SceneDelegate.swift in Sources */,
+				8CEC307224785D98005AD5F0 /* TargetArea.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

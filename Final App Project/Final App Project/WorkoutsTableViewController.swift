@@ -10,18 +10,28 @@ import UIKit
 
 class WorkoutsTableViewController: UITableViewController {
 
-    var workouts: [String: [String]] = ["Shoulders": ["Diving Dolphin", "Plank, Raise, Tap, Crunch", "Dumbbell Lateral Raise"],
-                    "Biceps": ["Bicep Curls", "Hammer Curls", "Feet Elevated Push-Ups", "Isolated Single Arm Curls"],
-                    "Triceps": ["Narrow Push-Up", "Diamond Push-Up", "Tricep Dips", "Tricep Extensions"],
-                    "Chest": [],
-                    "Abs": [],
-                    "Oblique": [],
-                    "Quads": [],
-                    "Hamstrings": [],
-                    "Calves": [] ]
+   // var listOfExercises = ExerciseList()
+    var workouts = [String: ExerciseList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        workouts = ["Shoulders": ExerciseList(exercises: ["Bicpers" : Exercise(description: <#T##String#>, image: <#T##UIImage#>)])\
+        workouts = ["Biceps": ExerciseList(exercises:
+            ["Hammer Curls" : Exercise(description: "Do stuff", image: UIImage()),
+             "Hammer Curls" : Exercise(description: "Do stuff", image: UIImage())],]
+
+    
+            
+//        workouts = ["Biceps": ExerciseList(exercises: ["Hammer Curls": Exercise(description: "Hold the weights down by your sides, with your palms facing inward and thumbs facing up. Start with your elbows pulled into your sides and curl the weights up to your shoulders. Finish the movement by extending your arms down slowly and with control. Do 10 reps of 2-3 sets", image: UIImage())], ["Feet Elevated Push-Up": Exercise(description: "Place your toes on a sturdy, elevated surface - like a bench, box, or step - and position yourself in a plank position with your hands shoulder-width-apart. Keep your hands flat and your shoulders above your wrists. Remember to keep your core and glutes engaged. And your body should be a straight line from head to toe. Bend your elbows and lower your chest to the floor. Once you get as low as you can, push through the palms of your hands to straighten your arms.Do 10 reps of 3 sets.", image: UIImage())],]
+        
+//        "Triceps": ExerciseList(),
+//        "Chest":ExerciseList(),
+//        "Abs":ExerciseList(),
+//        "Oblique": ExerciseList(),
+//        "Quads":ExerciseList(),
+//        "Hamstrings":ExerciseList(),
+//        "Calves":ExerciseList() ]
+      
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -102,7 +112,7 @@ class WorkoutsTableViewController: UITableViewController {
             let cell = sender as? UITableViewCell,
             let indexPath = self.tableView.indexPath(for: cell),
             let exercise = workouts[bodyParts[indexPath.row]] {
-            exerciseViewController.exerciseList = exercise
+                exerciseViewController.exerciseList = exercise
             
         }
     }

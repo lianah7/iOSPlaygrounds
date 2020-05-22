@@ -10,6 +10,7 @@ import UIKit
 
 class ExerciseViewController: UIViewController {
     
+    
     @IBOutlet weak var exerciseLabel: UILabel!
     
     @IBOutlet weak var exerciseDescription: UITextView!
@@ -19,9 +20,9 @@ class ExerciseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //         fix "exerciseList" part
-        exerciseLabel.text = exerciseList[myIndex]
-        exerciseDescription.text = exerciseDesc[myIndex]
-        exerciseImage.image = UIImage(named: ")
+        //exerciseLabel.text = exerciseList[myIndex]
+        //exerciseDescription.text = exerciseDesc[myIndex]
+       // exerciseImage.image = UIImage(named: ")
 
         // Do any additional setup after loading the view.
     }
