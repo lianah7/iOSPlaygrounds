@@ -15,12 +15,22 @@ class WorkoutsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        workouts = ["Shoulders": ExerciseList(exercises: ["Bicpers" : Exercise(description: <#T##String#>, image: <#T##UIImage#>)])\
-        workouts = ["Biceps": ExerciseList(exercises:
-            ["Hammer Curls" : Exercise(description: "Do stuff", image: UIImage()),
-             "Hammer Curls" : Exercise(description: "Do stuff", image: UIImage())],]
-
-    
+        workouts = [
+            "Biceps": ExerciseList(exercises:
+                ["Hammer Curls": Exercise(description: "Hammer something", image: UIImage()),
+                 "More Hammer Curls": Exercise(description: "do more things", image: UIImage()),
+                 "Something else": Exercise(description: "Keep going", image: UIImage())
+            ]),
+            "Shoulders": ExerciseList(exercises:
+                ["Pushups": Exercise(description: "Bend those elbows", image: UIImage()),
+                 "Pull-ups": Exercise(description: "Need a chin up bar", image: UIImage())
+            ]),
+            "Triceps": ExerciseList(exercises:
+                ["Pull downs": Exercise(description: "Bend those elbows", image: UIImage()),
+                 "Pull-ups": Exercise(description: "Need a chin up bar", image: UIImage()),
+                 "pully-thingy": Exercise(description: "Need a chin up bar", image: UIImage())
+            ])
+        ]
             
 //        workouts = ["Biceps": ExerciseList(exercises: ["Hammer Curls": Exercise(description: "Hold the weights down by your sides, with your palms facing inward and thumbs facing up. Start with your elbows pulled into your sides and curl the weights up to your shoulders. Finish the movement by extending your arms down slowly and with control. Do 10 reps of 2-3 sets", image: UIImage())], ["Feet Elevated Push-Up": Exercise(description: "Place your toes on a sturdy, elevated surface - like a bench, box, or step - and position yourself in a plank position with your hands shoulder-width-apart. Keep your hands flat and your shoulders above your wrists. Remember to keep your core and glutes engaged. And your body should be a straight line from head to toe. Bend your elbows and lower your chest to the floor. Once you get as low as you can, push through the palms of your hands to straighten your arms.Do 10 reps of 3 sets.", image: UIImage())],]
         

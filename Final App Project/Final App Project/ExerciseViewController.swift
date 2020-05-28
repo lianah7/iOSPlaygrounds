@@ -17,6 +17,8 @@ class ExerciseViewController: UIViewController {
     
     @IBOutlet weak var exerciseImage: UIImageView!
     
+    var currentExercise: Exercise? 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //         fix "exerciseList" part
