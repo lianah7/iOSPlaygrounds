@@ -93,13 +93,14 @@ class ExerciseTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "exercises" {
-            if let exerciseViewController = segue.destination as? ExerciseViewController,
-            let cell = sender as? UITableViewCell,
-            let indexPath = self.tableView.indexPath(for: cell),
-                let exercise = exerciseList![indexPath.row] {
-                    exerciseViewController.exerciseList = exercise
-                
+        let exercises = Array<String>((exerciseList?.exercises.keys)!)
+            if segue.identifier == "exercises" {
+                if let exerciseViewController = segue.destination as? ExerciseViewController,
+                let cell = sender as? UITableViewCell,
+                let indexPath = self.tableView.indexPath(for: cell),
+                    let exercise = exerciseList!.exercises[exercises[indexPath.row]] {
+                    exerciseViewController.currentExercise = exercise
+
             }
         }
     }

@@ -22,7 +22,7 @@ class WorkoutsTableViewController: UITableViewController {
                  "Something else": Exercise(description: "Keep going", image: UIImage())
             ]),
             "Shoulders": ExerciseList(exercises:
-                ["Pushups": Exercise(description: "Bend those elbows", image: UIImage()),
+                ["Pushups": Exercise(description: "Bend those elbows", image: UIImage(named: "Push-Ups")!),
                  "Pull-ups": Exercise(description: "Need a chin up bar", image: UIImage())
             ]),
             "Triceps": ExerciseList(exercises:

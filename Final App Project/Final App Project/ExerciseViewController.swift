@@ -21,11 +21,10 @@ class ExerciseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//         fix "exerciseList" part
-        //exerciseLabel.text = exerciseList[myIndex]
-        //exerciseDescription.text = exerciseDesc[myIndex]
-       // exerciseImage.image = UIImage(named: ")
-
+        print(currentExercise?.description)
+        exerciseDescription.text = currentExercise?.description
+        exerciseImage.image = currentExercise?.image 
+        
         // Do any additional setup after loading the view.
     }
     

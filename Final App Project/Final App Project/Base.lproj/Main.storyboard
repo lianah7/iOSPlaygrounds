@@ -284,7 +284,6 @@
                     <connections>
                         <outlet property="exerciseDescription" destination="92g-UO-9ga" id="Jtm-AM-VSh"/>
                         <outlet property="exerciseImage" destination="eSa-iJ-fGN" id="GsP-MP-lgt"/>
-                        <outlet property="exerciseTitle" destination="s8A-6D-xq9" id="2Bt-ZC-3Vq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xss-iZ-c2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
