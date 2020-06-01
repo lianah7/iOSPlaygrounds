@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8CEC302224489111005AD5F0 /* Final App Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Final App Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CEC302224489111005AD5F0 /* Up and Moving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Up and Moving.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CEC302524489111005AD5F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CEC302724489111005AD5F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8CEC302C24489111005AD5F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		8CEC302324489111005AD5F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8CEC302224489111005AD5F0 /* Final App Project.app */,
+				8CEC302224489111005AD5F0 /* Up and Moving.app */,
 				8CEC303824489115005AD5F0 /* Final App ProjectTests.xctest */,
 				8CEC304324489116005AD5F0 /* Final App ProjectUITests.xctest */,
 			);
@@ -175,7 +175,7 @@
 			);
 			name = "Final App Project";
 			productName = "Final App Project";
-			productReference = 8CEC302224489111005AD5F0 /* Final App Project.app */;
+			productReference = 8CEC302224489111005AD5F0 /* Up and Moving.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8CEC303724489115005AD5F0 /* Final App ProjectTests */ = {
@@ -480,8 +480,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ssfs.Final-App-Project";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ssfs.Up-and-Moving";
+				PRODUCT_NAME = "Up and Moving";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -497,8 +497,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ssfs.Final-App-Project";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ssfs.Up-and-Moving";
+				PRODUCT_NAME = "Up and Moving";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

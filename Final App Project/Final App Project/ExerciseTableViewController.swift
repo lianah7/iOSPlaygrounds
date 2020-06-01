@@ -8,8 +8,6 @@
 
 import UIKit
 
-//    https://www.youtube.com/watch?v=A6Wl8ySrOZI
-
 
 class ExerciseTableViewController: UITableViewController {
 // receives information 
@@ -94,12 +92,13 @@ class ExerciseTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         let exercises = Array<String>((exerciseList?.exercises.keys)!)
-            if segue.identifier == "exercises" {
+            if segue.identifier == "selectedExercise" {
                 if let exerciseViewController = segue.destination as? ExerciseViewController,
                 let cell = sender as? UITableViewCell,
                 let indexPath = self.tableView.indexPath(for: cell),
                     let exercise = exerciseList!.exercises[exercises[indexPath.row]] {
                     exerciseViewController.currentExercise = exercise
+                    exerciseViewController.currentExerciseTitle = exercises[indexPath.row]
 
             }
         }

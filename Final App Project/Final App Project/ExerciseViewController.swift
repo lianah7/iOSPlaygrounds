@@ -17,14 +17,14 @@ class ExerciseViewController: UIViewController {
     
     @IBOutlet weak var exerciseImage: UIImageView!
     
-    var currentExercise: Exercise? 
+    var currentExercise: Exercise?
+    var currentExerciseTitle: String? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(currentExercise?.description)
         exerciseDescription.text = currentExercise?.description
-        exerciseImage.image = currentExercise?.image 
-        
+        exerciseImage.image = currentExercise?.image
+        exerciseLabel.text = currentExerciseTitle 
         // Do any additional setup after loading the view.
     }
     
