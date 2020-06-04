@@ -10,7 +10,7 @@
         <!--Log Table View Controller-->
         <scene sceneID="Oi8-lX-NeV">
             <objects>
-                <tableViewController id="n6J-hc-fL1" userLabel="Log Table View Controller" customClass="LogTableViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="n6J-hc-fL1" userLabel="Log Table View Controller" customClass="LogTableViewController" customModule="Up_and_Moving" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B9n-3k-h2I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
         <!--New Log Entry View Controller-->
         <scene sceneID="pzv-1x-d1t">
             <objects>
-                <viewController id="Gik-y6-W8n" userLabel="New Log Entry View Controller" customClass="NewLogEntryViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gik-y6-W8n" userLabel="New Log Entry View Controller" customClass="NewLogEntryViewController" customModule="Up_and_Moving" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mTo-Hj-dsZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
         <!--Log Entry View Controller-->
         <scene sceneID="BiH-Kt-USB">
             <objects>
-                <viewController id="hxy-73-ZGF" userLabel="Log Entry View Controller" customClass="LogEntryViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hxy-73-ZGF" userLabel="Log Entry View Controller" customClass="LogEntryViewController" customModule="Up_and_Moving" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vrf-SP-s5e" customClass="JournalEntryViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,7 +180,7 @@
         <!--Workouts-->
         <scene sceneID="xbg-kW-tAC">
             <objects>
-                <tableViewController id="kCA-f1-T9R" customClass="WorkoutsTableViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="kCA-f1-T9R" customClass="WorkoutsTableViewController" customModule="Up_and_Moving" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="77v-7l-0pB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +212,7 @@
         <!--Exercise Table View Controller-->
         <scene sceneID="sV1-jr-yxS">
             <objects>
-                <tableViewController id="BAT-1o-pKL" customClass="ExerciseTableViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="BAT-1o-pKL" customClass="ExerciseTableViewController" customModule="Up_and_Moving" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bnj-Gl-ity">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,30 +244,30 @@
         <!--Exercise View Controller-->
         <scene sceneID="CTE-5r-YIj">
             <objects>
-                <viewController storyboardIdentifier="exerciseView" id="Kza-iS-9sj" customClass="ExerciseViewController" customModule="Final_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="exerciseView" id="Kza-iS-9sj" customClass="ExerciseViewController" customModule="Up_and_Moving" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nIJ-fW-b5b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eSa-iJ-fGN">
+                                <rect key="frame" x="67" y="630" width="281" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8A-6D-xq9">
+                                <rect key="frame" x="17" y="102" width="380" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="92g-UO-9ga">
-                                <rect key="frame" x="8" y="226" width="414" height="301"/>
+                                <rect key="frame" x="11" y="156" width="386" height="441"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eSa-iJ-fGN">
-                                <rect key="frame" x="87" y="578" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8A-6D-xq9">
-                                <rect key="frame" x="63" y="119" width="264" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bWK-fC-OcJ"/>
