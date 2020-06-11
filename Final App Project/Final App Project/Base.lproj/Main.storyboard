@@ -299,10 +299,24 @@
                             <constraint firstItem="bWK-fC-OcJ" firstAttribute="bottom" secondItem="eSa-iJ-fGN" secondAttribute="bottom" constant="97" id="H2I-vT-0tH"/>
                             <constraint firstItem="92g-UO-9ga" firstAttribute="leading" secondItem="bWK-fC-OcJ" secondAttribute="leading" constant="55" id="IMK-SB-TVl"/>
                             <constraint firstItem="eSa-iJ-fGN" firstAttribute="centerX" secondItem="nIJ-fW-b5b" secondAttribute="centerX" id="MIW-A8-1cI"/>
+                            <constraint firstItem="eSa-iJ-fGN" firstAttribute="centerX" secondItem="nIJ-fW-b5b" secondAttribute="centerX" id="OXm-d3-9el"/>
+                            <constraint firstItem="eSa-iJ-fGN" firstAttribute="centerX" secondItem="nIJ-fW-b5b" secondAttribute="centerX" id="XXw-21-See"/>
                             <constraint firstItem="bWK-fC-OcJ" firstAttribute="trailing" secondItem="eSa-iJ-fGN" secondAttribute="trailing" constant="61" id="n84-42-skO"/>
                             <constraint firstItem="s8A-6D-xq9" firstAttribute="centerX" secondItem="nIJ-fW-b5b" secondAttribute="centerX" id="yqZ-1M-Iaq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bWK-fC-OcJ"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OXm-d3-9el"/>
+                                <exclude reference="XXw-21-See"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="OXm-d3-9el"/>
+                                <include reference="XXw-21-See"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="HDf-iz-Tst"/>
                     <connections>
