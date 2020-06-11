@@ -18,10 +18,6 @@ class LogTableViewController: UITableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for index in 0...4 {
-            log.entries.append(LogEntry(date: Date(), contents: "Contents for entry\(index)"))
-        }
             
 
         // Uncomment the following line to preserve selection between presentations
@@ -32,6 +28,8 @@ class LogTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+// The following lines of code sets the name of the log entries with the date and appends the user's log entry so it can be displayed when the user selects the cell
     
     @IBAction func done(segue: UIStoryboardSegue) {
         let newLogEntry = segue.source as! NewLogEntryViewController
@@ -101,6 +99,9 @@ class LogTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+//  The following lines of code sets up the log entry as an entry to be displayed in the LogTableViewController
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == logEntrySegueIdentifier {
             if let logEntryViewController = segue.destination as? LogEntryViewController, let cell = sender as? UITableViewCell, let indexPath = self.tableView.indexPath(for: cell), let entry = log.entry(index: indexPath.row) {

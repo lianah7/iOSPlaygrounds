@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// This struct used to set up the ExerciseList in WorkoutsTableViewController. It sets up the description as a string and the image as an UIImage within the ExerciseList
+
 struct Exercise {
     var description: String
     var image: UIImage

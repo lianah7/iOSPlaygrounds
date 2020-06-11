@@ -9,7 +9,8 @@
 import UIKit
 
 class NewLogEntryViewController: UIViewController {
-    
+
+// The following lines of code sets up the cancel button in the user's new log entry
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)

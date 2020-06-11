@@ -17,6 +17,8 @@ class LogEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+// The following lines of code sets up the user's log as the content for the log entry, and allows the user to type in the description box
+        
         if let logEntry = logEntry {
             logEntryContents.text = logEntry.contents
             navigationItem.title = logEntry.description

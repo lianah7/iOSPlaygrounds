@@ -8,6 +8,8 @@
 
 import Foundation
 
+//this struct sets up the workouts array in WorkoutsTableViewController to show that the exercises is an array of Exercises consisting of the name, description, and image of each exercise
+
 struct TargetArea {
     var exercises: [Exercise]
 }

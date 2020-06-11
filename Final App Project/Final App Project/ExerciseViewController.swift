@@ -10,6 +10,7 @@ import UIKit
 
 class ExerciseViewController: UIViewController {
     
+//The following lines on code are variables for the selected exercise, title, description, and image
     
     @IBOutlet weak var exerciseLabel: UILabel!
     
@@ -17,8 +18,12 @@ class ExerciseViewController: UIViewController {
     
     @IBOutlet weak var exerciseImage: UIImageView!
     
+//The two following lines of code help pass the
+    
     var currentExercise: Exercise?
     var currentExerciseTitle: String? 
+ 
+//The following lines of code sets and displays the selected exercise's description, image, and name onto the ExerciseViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()

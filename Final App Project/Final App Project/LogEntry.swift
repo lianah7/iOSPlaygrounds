@@ -8,6 +8,8 @@
 
 import Foundation
 
+// This struct sets up the style and type for the description and the title of the entry
+
 struct LogEntry: CustomStringConvertible {
     let date: Date
     let contents: String

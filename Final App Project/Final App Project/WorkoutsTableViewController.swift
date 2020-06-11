@@ -10,7 +10,10 @@ import UIKit
 
 class WorkoutsTableViewController: UITableViewController {
 
-   // var listOfExercises = ExerciseList()
+//The line of code below creates the base for all the workout information: the target area is the string, the name of the exercise, description and image are within the ExerciseList, the
+    
+//The equation goes Target Area, within ExerciseList is a list of exercises, within exercises the name of the exercise and Exercise, within Exercise is the description and image for each exercise
+
     var workouts = [String: ExerciseList]()
     
     override func viewDidLoad() {
@@ -103,6 +106,7 @@ class WorkoutsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+//Ths following lines on code provides the number of cells based on the number of Target Areas - for example: Triceps and Biceps
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -112,6 +116,9 @@ class WorkoutsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "workouts", for: indexPath)
+        
+// The follwing lines of code sets up the target areas as the titles for each cell in the table view
+        
         let bodyParts = Array(workouts.keys)
         cell.textLabel?.text = bodyParts[indexPath.row]
         
@@ -160,6 +167,9 @@ class WorkoutsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+// The follwing lines of code sets up passing the list of exercises available based on the user's selected target area for working out onto the ExerciseTableViewController
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.

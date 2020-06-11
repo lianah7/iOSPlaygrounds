@@ -10,7 +10,7 @@ import UIKit
 
 
 class ExerciseTableViewController: UITableViewController {
-// receives information 
+// receives information
     var exerciseList: ExerciseList?
     
     override func viewDidLoad() {
@@ -29,7 +29,9 @@ class ExerciseTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
+// The following lines of code sets up the number of cells based on the number of exercises for each target area
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return exerciseList!.exercises.count
@@ -38,7 +40,9 @@ class ExerciseTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseDisplay", for: indexPath)
-        //cell.textLabel?.text = exerciseList?.exercises[indexPath.row]
+
+//The following lines of code sets the title for each cell in the table view as the name of the exercise
+        
         let listOfExercises = Array<String>((exerciseList?.exercises.keys)!)
         cell.textLabel?.text = listOfExercises[indexPath.row]
         
@@ -88,6 +92,9 @@ class ExerciseTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+//The following lines of code prepares the description and image of the selected exercise to be passed onto the ExerciseViewController
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.

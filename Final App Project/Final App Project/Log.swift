@@ -8,6 +8,8 @@
 
 import Foundation
 
+//This struct sets up the LogTableViewController - the add buttom, the title of the entry and the index of each entry 
+
 struct Log {
     var entries = [LogEntry]()
     var count: Int {
